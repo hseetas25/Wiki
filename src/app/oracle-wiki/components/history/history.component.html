@@ -1,0 +1,35 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class=" text-center align-items-center">
+                <b style="font-size: small; padding: 2%; background-color: rgb(175, 43, 43); letter-spacing: 5px;border-radius: 10px; color: white;">History</b>
+                <div *ngIf="history.length == 0" class="text-center mt-4">
+                    <h1>No History available</h1>
+                </div>
+                <div class="row mt-3 d-flex align-items-center justify-content-center">
+                    <div class="col-sm-6" *ngFor="let hist of history" (click)="selectHistory(hist.sNo)">
+                        <div class="search-card container my-2">
+                            <b style="text-transform: capitalize;">{{hist.search}}</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="text-center align-items-center">
+                <b style="font-size: small; padding: 2%; background-color: rgb(175, 43, 43); letter-spacing: 5px;border-radius: 10px; color: white;">Show History</b>
+                <div *ngIf="selectHist == ''" class="text-center mt-3">
+                    <b><h5>Click on any History card to show</h5></b>
+                </div>
+                <div>
+                    <div class="selectHist mt-3">
+                        <b></b>
+                        <div id="hist">
+                            <b> </b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

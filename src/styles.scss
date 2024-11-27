@@ -1,0 +1,109 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* 
+    * ---------- GLOBAL STYLES - styles.scss ----------
+    |
+    | NOTES:
+    | * Colors have been declared here and they are system-theme-aware
+    | * Default Font: Inter (Google Fonts)
+    |
+    * ----------------------------------------------------
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    /* GLOBAL */
+    --theme-25:  rgb(175, 43, 43);
+    --theme-50: rgb(175, 43, 43);
+    --theme-75: rgb(175, 43, 43);
+    --theme-col: rgb(175, 43, 43);
+    
+
+    /* LIGHT THEME */
+    --theme-active: rgb(175, 43, 43);
+    --bg-col: rgb(241, 250, 247);
+    --text-col: #1e1e1e;
+    --link-col: #4d4d4d;
+    --border-col: #dedede;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* ================================================================ */
+/* HEADINGS & PARAGRAPHS                                            */
+/* ================================================================ */
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.display-3 {
+    font-weight: bold;
+}
+
+/* ================================================================ */
+/* BACKGROUND COLORS                                                */
+/* ================================================================ */
+.bg-primary {
+    background-color: var(--theme-col) !important;
+}
+
+/* ================================================================ */
+/* BUTTONS                                                          */
+/* ================================================================ */
+
+.btn-primary {
+    border-color: var(--theme-50);
+    border-radius: 12px;
+
+    background-color: var(--theme-25);
+    color: var(--text-col);
+}
+
+.btn-primary:hover {
+    border-color: var(--theme-active);
+    background-color: var(--theme-active);
+
+    color: var(--bg-col);
+}
+
+.btn-primary:active, .btn-primary:focus {
+    box-shadow: 0 0 0 0.25rem var(--theme-25) !important;
+    background-color: var(--theme-active) !important;
+    
+    border-color: var(--theme-active);
+    color: var(--bg-col);
+}
+
+/* ================================================================ */
+/* FORM CONTROL                                                     */
+/* ================================================================ */
+.form-control {
+    border-radius: 12px;
+}
+
+.form-control:active, .form-control:focus {
+    box-shadow: 0 0 0 0.25rem var(--theme-active) !important;
+    border-color: var(--theme-active);
+}
+
+/* ================================================================ */
+/* FULL WIDTH CARD                                                  */
+/* ================================================================ */
+.fw-card {
+    padding: 16px;
+    border: 1px solid lightgrey;
+    border-radius: 12px;
+    transition: all 0.3s;
+    box-shadow: 0 8px 16px var(--theme-25);
+}
